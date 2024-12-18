@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:movies_app/core/colors_manager.dart';
 import 'package:movies_app/core/routes_manager.dart';
 
 class Splash extends StatefulWidget {
@@ -22,6 +23,13 @@ class _SplashState extends State<Splash> {
   }
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return  Container(
+      height: double.infinity,
+      width: double.infinity,
+      color: ColorsManager.backgroundColor,
+      child: Center(child:
+        Image.asset('assets/moviesLogo.png'),
+        ),
+    );
   }
 }
