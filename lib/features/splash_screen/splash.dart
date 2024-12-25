@@ -18,7 +18,7 @@ class _SplashState extends State<Splash> {
     super.initState();
     Timer(
       const Duration(seconds: 3),
-      () => Navigator.pushReplacementNamed(context,RoutesManager.home),
+      () => Navigator.pushReplacementNamed(context,RoutesManager.tabs),
     );
   }
   @override
@@ -26,7 +26,7 @@ class _SplashState extends State<Splash> {
     return  Container(
       height: double.infinity,
       width: double.infinity,
-      color: ColorsManager.backgroundColor,
+      color: ColorsManager.background,
       child: Center(child:
         Image.asset('assets/moviesLogo.png'),
         ),
