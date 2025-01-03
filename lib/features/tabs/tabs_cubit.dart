@@ -4,13 +4,14 @@ import 'package:meta/meta.dart';
 import 'package:movies_app/features/browse_screen/browse.dart';
 import 'package:movies_app/features/home/home.dart';
 import 'package:movies_app/features/search_screen/search.dart';
-import 'package:movies_app/features/wish_list_screen/wish_list.dart';
+
+import '../watch_list/watch_list.dart';
 
 part 'tabs_state.dart';
 class TabsCubit extends Cubit<TabsState> {
    int selectedItem=0;
 
-   List<Widget>tabs=[Home(),Search(),Browse(),WishList()];
+   List<Widget>tabs=[Home(),Search(),Browse(),WatchList()];
 
   TabsCubit() : super(TabsInitial());
 

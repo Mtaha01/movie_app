@@ -7,4 +7,7 @@ class ColorsManager{
   static const  Color yellow=Color(0xFFF7B539);
   static const  Color offWhite=Color(0xFFC6C6C6);
   static const  Color white=Color(0xFFFFFFFF);
+  static const  Color detailsBackgroundColor=Color(0xFF343534);
+  static const  Color appBarBackgroundColor=Color(0xFF343534);
+
 }

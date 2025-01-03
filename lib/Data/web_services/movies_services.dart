@@ -15,7 +15,9 @@ class MoviesWebServices{
     http.Response serverResponse = await http.get(url); // make a network Request
     Map<String, dynamic> json = jsonDecode(serverResponse.body); // convert from string to json
     MoviesResponse moviesResponse = MoviesResponse.fromJson(json);
-    print(moviesResponse.movies!.length);
+    await Future.wait(moviesResponse.movies!.map((movieX)async{
+      await movieX.setWatchList(movieX.id!);
+    }));
     return moviesResponse.movies!;
   }
 
@@ -24,7 +26,9 @@ class MoviesWebServices{
     http.Response serverResponse = await http.get(url); // make a network Request
     Map<String, dynamic> json = jsonDecode(serverResponse.body); // convert from string to json
     MoviesResponse moviesResponse = MoviesResponse.fromJson(json);
-    print(moviesResponse.movies!.length);
+    await Future.wait(moviesResponse.movies!.map((movieX)async{
+      await movieX.setWatchList(movieX.id!);
+    }));
     return moviesResponse.movies!;
   }
 
@@ -33,7 +37,9 @@ class MoviesWebServices{
     http.Response serverResponse = await http.get(url); // make a network Request
     Map<String, dynamic> json = jsonDecode(serverResponse.body); // convert from string to json
     MoviesResponse moviesResponse = MoviesResponse.fromJson(json);
-    print(moviesResponse.movies!.length);
+    await Future.wait(moviesResponse.movies!.map((movieX)async{
+      await movieX.setWatchList(movieX.id!);
+    }));
     return moviesResponse.movies!;
   }
 

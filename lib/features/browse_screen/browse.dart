@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movies_app/core/app_styles.dart';
 import 'package:movies_app/features/browse_screen/browse_cubit.dart';
 import 'package:movies_app/features/browse_screen/category_widget.dart';
 
@@ -19,16 +20,20 @@ class Browse extends StatelessWidget {
           return Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                  "Browse Category"
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                    "Browse Category",
+                  style: AppStyles.mediumTitles,
+                ),
               ),
               Expanded(
-                child:categoryCubit.categoriesAreLoading? Icon(Icons.downloading): GridView.builder(
+                child:categoryCubit.categoriesAreLoading? const Icon(Icons.downloading): GridView.builder(
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
                   ),
                   itemCount: categoryCubit.categories.length,
-                  itemBuilder: (context, index) => CategoryWidget(categoryText: categoryCubit.categories[index].name!),
+                  itemBuilder: (context, index) => CategoryWidget(category: categoryCubit.categories[index]),
                 ),
               )
             ],

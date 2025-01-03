@@ -3,7 +3,6 @@ import 'package:flutter/foundation.dart';
 import 'package:meta/meta.dart';
 import 'package:movies_app/Data/Models/categories.dart';
 import 'package:movies_app/Data/web_services/categories_web_services.dart';
-import 'package:movies_app/Data/web_services/movies_services.dart';
 
 part 'browse_state.dart';
 

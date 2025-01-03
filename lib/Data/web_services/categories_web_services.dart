@@ -14,7 +14,6 @@ class CategoriesWebServices{
     http.Response serverResponse = await http.get(url); // make a network Request
     Map<String, dynamic> json = jsonDecode(serverResponse.body); // convert from string to json
     CategoriesResponse categoriesResponse = CategoriesResponse.fromJson(json);
-    print(categoriesResponse.categories!.length);
     return categoriesResponse.categories!;
   }
 

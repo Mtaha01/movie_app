@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movies_app/core/colors_manager.dart';
 import 'package:movies_app/features/tabs/tabs_cubit.dart';
 
 class Tabs extends StatelessWidget {
@@ -14,6 +13,7 @@ class Tabs extends StatelessWidget {
             builder: (BuildContext context,state){
               var cubit = context.read<TabsCubit>();
               return Scaffold(
+                resizeToAvoidBottomInset: false,
                 bottomNavigationBar: BottomNavigationBar(
                   //backgroundColor: ColorsManager.navigationColor,
                   currentIndex: cubit.selectedItem,
